@@ -38,9 +38,6 @@ dependencies {
     implementation("org.jetbrains.intellij.plugins:structure-base:3.246") {
         exclude("org.jetbrains.kotlin")
     }
-    implementation("org.jetbrains.intellij.plugins:structure-intellij:3.246") {
-        exclude("org.jetbrains.kotlin")
-    }
     implementation("org.jetbrains.intellij:plugin-repository-rest-client:2.0.30") {
         exclude("org.jetbrains.kotlin")
         exclude("org.slf4j")
@@ -51,6 +48,9 @@ dependencies {
     implementation("com.googlecode.plist:dd-plist:1.26")
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
 
+    api("org.jetbrains.intellij.plugins:structure-intellij:3.246") {
+        exclude("org.jetbrains.kotlin")
+    }
 
     testImplementation(gradleTestKit())
     testImplementation(kotlin("test"))
