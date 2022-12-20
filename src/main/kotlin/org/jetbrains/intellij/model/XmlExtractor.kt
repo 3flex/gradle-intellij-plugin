@@ -13,7 +13,7 @@ import java.nio.file.Path
 import javax.xml.bind.JAXBContext
 import javax.xml.bind.JAXBException
 
-class XmlExtractor<T>(private val context: String? = null) {
+internal class XmlExtractor<T>(private val context: String? = null) {
 
     private val jaxbContext by lazy {
         JAXBContext.newInstance("org.jetbrains.intellij.model", ObjectFactory::class.java.classLoader)

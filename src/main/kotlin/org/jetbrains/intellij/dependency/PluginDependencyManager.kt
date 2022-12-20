@@ -37,7 +37,7 @@ abstract class PluginDependencyManager @Inject constructor(
     private val pluginSources = mutableSetOf<String>()
     private var ivyArtifactRepository: IvyArtifactRepository? = null
 
-    fun resolve(project: Project, dependency: PluginDependencyNotation): PluginDependency? {
+    internal fun resolve(project: Project, dependency: PluginDependencyNotation): PluginDependency? {
         val ideaDependency = ideaDependencyProvider.get() // TODO fix
 
         if (dependency.version.isNullOrEmpty() && dependency.channel.isNullOrEmpty()) {
@@ -70,7 +70,7 @@ abstract class PluginDependencyManager @Inject constructor(
         )
     }
 
-    fun register(project: Project, plugin: PluginDependency, dependencies: DependencySet) {
+    internal fun register(project: Project, plugin: PluginDependency, dependencies: DependencySet) {
         if (plugin.maven && plugin.artifact.toPath().isJar()) {
             dependencies.add(plugin.notation.toDependency(project))
             return
