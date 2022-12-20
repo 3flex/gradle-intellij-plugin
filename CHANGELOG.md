@@ -10,6 +10,7 @@
 - Make `listBundledPlugins` not printing output as `printBundledPlugins` does that
 - Fixed `taskdef class com.intellij.ant.InstrumentIdeaExtensions cannot be found` [#1259](../../issues/1259)
 - Don't warn about unexpected instrumentation task name [#1214](../../issues/1214)
+- Align dependency scope with API visibility [#1260](../../issues/1260)
 
 ## [1.11.0] - 2022-12-17
 
