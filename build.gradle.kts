@@ -33,6 +33,8 @@ repositories {
 
 dependencies {
     compileOnly("org.jetbrains:annotations:23.1.0")
+    compileOnly("gradle.plugin.org.jetbrains.gradle.plugin.idea-ext:gradle-idea-ext:1.1.7")
+    compileOnly("org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.22")
     implementation("org.jetbrains.intellij.plugins:structure-base:3.246") {
         exclude("org.jetbrains.kotlin")
     }
@@ -49,8 +51,6 @@ dependencies {
     implementation("com.googlecode.plist:dd-plist:1.26")
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
 
-    api("gradle.plugin.org.jetbrains.gradle.plugin.idea-ext:gradle-idea-ext:1.1.7")
-    api("org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.22")
 
     testImplementation(gradleTestKit())
     testImplementation(kotlin("test"))
